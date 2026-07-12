@@ -1,25 +1,36 @@
-
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
+const navLinks = document.querySelectorAll('.navbar-menu a');
 
 navbarToggle.addEventListener('click', () => {
     navbarToggle.classList.toggle('active');
     navbarMenu.classList.toggle('active');
-})
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
+});
 
-window.onscroll = () => {
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbarToggle.classList.remove('active');
+        navbarMenu.classList.remove('active');
+    });
+});
+
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+    const top = window.scrollY;
+
     sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute("id");
+        const offset = sec.offsetTop - 150;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+
         if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove("active");
-                document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
-            });
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const currentLink = document.querySelector(`.navbar-menu a[href*="${id}"]`);
+            if (currentLink) {
+                currentLink.classList.add('active');
+            }
         }
     });
-}
+});
