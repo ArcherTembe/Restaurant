@@ -1,18 +1,43 @@
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
 const navLinks = document.querySelectorAll('.navbar-menu a');
+const toggleIcon = navbarToggle.querySelector('i'); 
 
-navbarToggle.addEventListener('click', () => {
+// Toggle menu on hamburger button click
+navbarToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); 
     navbarToggle.classList.toggle('active');
     navbarMenu.classList.toggle('active');
+    
+    if (navbarToggle.classList.contains('active')) {
+        toggleIcon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        toggleIcon.classList.replace('fa-xmark', 'fa-bars');
+    }
 });
 
+// Close menu when the navigation link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navbarToggle.classList.remove('active');
-        navbarMenu.classList.remove('active');
+        closeMenu();
     });
 });
+
+//Close menu when clicking anywhere on the page outside the menu
+window.addEventListener('click', (e) => {
+    // Check if the menu is open AND the user clicked outside both the menu and toggle button
+    if (navbarMenu.classList.contains('active') && 
+        !navbarMenu.contains(e.target) && 
+        !navbarToggle.contains(e.target)) {
+        closeMenu();
+    }
+});
+
+function closeMenu() {
+    navbarToggle.classList.remove('active');
+    navbarMenu.classList.remove('active');
+    toggleIcon.classList.replace('fa-xmark', 'fa-bars');
+}
 
 const sections = document.querySelectorAll('section');
 
