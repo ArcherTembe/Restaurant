@@ -35,6 +35,16 @@
   --transition-slow: 0.6s var(--ease-out);
 }
 
+a, a:visited, a:active {
+  color: #4b3202; /* Replace with your default text color */
+}
+
+a:hover {
+  color: #4b3202; 
+  text-decoration: underline; 
+}
+
+
 * {
   margin: 0;
   padding: 0;
