@@ -23,10 +23,32 @@ nav a{
     transition: .3s;
 }
 
+/* Desktop setting: Hides the container inside the horizontal menu bar */
+.navbar-menu .canvas-social {
+    display:block;
+}
+
+
 nav a:hover,
 nav a.active {
     color:#986e0a;
 }
+
+/* Target the Font Awesome icon inside your toggle button */
+.navbar-toggle i {
+    color: #986e0a;
+    font-size: 1.8rem;
+    display: inline-block; /* Essential for transform animations to work properly */
+    transition: transform 0.4s ease-in-out, color 0.3s ease;
+}
+
+/* When the menu opens, spin the icon 180 degrees */
+.navbar-toggle.active i {
+    transform: rotate(180deg);
+    color: #d6af53; /* Optional: slightly changes color for active feedback */
+}
+
+
 
 section{
     min-height:100vh;
