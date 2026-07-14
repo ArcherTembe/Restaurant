@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bubbles and Craft</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -11,11 +11,12 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#home" class="navbar-logo" class="logo">BB&C</a>
+            <a href="#home" class="navbar-logo" class="logo">BUBBLES AND CRAFT</a>
                 <button class="navbar-toggle">
                     <i class="fa-solid fa-bars fa-xl" style="color: hsl(42, 88%, 32%);"></i>
                 </button>
 
+            <!--responsiveness(mobile version)-->
             <ul class="navbar-menu">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -34,7 +35,86 @@
         <h1>Welcome to Bubble and Crafts</h1>
     </section>
     <section id="about">About</section>
-    <section id="menu">Menu</section>
+    <!-- Menu Section -->
+<section id="menu" class="menu-section">
+   <div id="slider">
+      <!-- Hidden Radio Toggles for Categories -->
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <input type="radio" name="slider" id="slide4">
+      
+      <div id="slides">
+         <div id="overflow">
+            <div class="inner">
+               
+               <!-- Category 1: Drinks -->
+               <div class="slide slide_1">
+                  <div class="slide-content">
+                     <h2><i class="fa-solid fa-glass-water"></i> Craft Drinks</h2>
+                     <ul class="menu-items">
+                        <li>Bubble Tea <span>$5.50</span></li>
+                        <li>Craft Soda <span>$4.00</span></li>
+                        <li>Iced Matcha <span>$5.00</span></li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <!-- Category 2: Dessert -->
+               <div class="slide slide_2">
+                  <div class="slide-content">
+                     <h2><i class="fa-solid fa-ice-cream"></i> Desserts</h2>
+                     <ul class="menu-items">
+                        <li>Mochi Ice Cream <span>$4.50</span></li>
+                        <li>Fluffy Pancakes <span>$7.00</span></li>
+                        <li>Sweet Waffles <span>$6.50</span></li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <!-- Category 3: Mains / Snacks -->
+               <div class="slide slide_3">
+                  <div class="slide-content">
+                     <h2><i class="fa-solid fa-utensils"></i> Light Bites</h2>
+                     <ul class="menu-items">
+                        <li>Craft Sliders <span>$9.00</span></li>
+                        <li>Sweet Potato Fries <span>$5.00</span></li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <!-- Category 4: Specials -->
+               <div class="slide slide_4">
+                  <div class="slide-content">
+                     <h2><i class="fa-solid fa-star"></i> Weekly Specials</h2>
+                     <ul class="menu-items">
+                        <li>Chef's Bubble Waffle <span>$8.50</span></li>
+                     </ul>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+      
+      <!-- Desktop Navigation Arrow Controls -->
+      <div id="controls">
+         <label for="slide1"></label>
+         <label for="slide2"></label>
+         <label for="slide3"></label>
+         <label for="slide4"></label>
+      </div>
+      
+      <!-- Navigation Dot Bullets -->
+      <div id="bullets">
+         <label for="slide1">Drinks</label>
+         <label for="slide2">Desserts</label>
+         <label for="slide3">Bites</label>
+         <label for="slide4">Specials</label>
+      </div>
+   </div>
+</section>
+
     <section id="visit" class="visit-section">
         <div class="visit-left">
     <u>
@@ -43,8 +123,8 @@
         </span>
     </u>
     <p style="margin-top: 1rem;">Tuesday - Friday</p>
-            <p>8:00 - 18:00</p>
-<hr style="border-radius: 6px; width: 160px; height: 3px; background-color: #986e0a; border: none; margin: 0 auto;" />
+            <pre>8:00 - 18:00</pre>
+<hr style="border-radius: 6px; width: 177px; height: 3px; background-color: #986e0a; border: none; margin: 0 auto;" />
 
             <pre>Saturday  8:00 - 21:00</pre>
             <pre>Sunday  8:00 - 19:00</pre>       
