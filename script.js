@@ -59,3 +59,37 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Mobile Swiping Implementation for Menu Carousel Slider
+const menuSlider = document.getElementById('slider');
+if (menuSlider) {
+   const sliderRadios = Array.from(menuSlider.querySelectorAll('input[name="slider"]'));
+   let startX = 0;
+   let endX = 0;
+
+   // Monitors screen location where finger initiates contact
+   menuSlider.addEventListener('touchstart', (event) => {
+      startX = event.changedTouches[0].screenX;
+   }, { passive: true });
+
+   // Monitors coordinates where finger leaves viewport surface
+   menuSlider.addEventListener('touchend', (event) => {
+      endX = event.changedTouches[0].screenX;
+      evaluateSwipeGesture();
+   }, { passive: true });
+
+   function evaluateSwipeGesture() {
+      const thresholdPixels = 60; // Structural buffer setting required to validate swipe action
+      const activeIndex = sliderRadios.findIndex(radio => radio.checked);
+
+      if (startX - endX > thresholdPixels) {
+         // Swiped Left -> Advances forward to the next menu category card
+         const nextIndex = (activeIndex + 1) % sliderRadios.length;
+         sliderRadios[nextIndex].checked = true;
+      } else if (endX - startX > thresholdPixels) {
+         // Swiped Right -> Pulls backward onto the previous category list
+         const prevIndex = (activeIndex - 1 + sliderRadios.length) % sliderRadios.length;
+         sliderRadios[prevIndex].checked = true;
+      }
+   }
+}
