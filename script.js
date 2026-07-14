@@ -41,8 +41,9 @@ function closeMenu() {
 
 const sections = document.querySelectorAll('section');
 
-window.addEventListener('scroll', () => {
+function updateActiveLinkOnScroll() {
     const top = window.scrollY;
+    let found = false;
 
     sections.forEach(sec => {
         const offset = sec.offsetTop - 150;
@@ -55,10 +56,21 @@ window.addEventListener('scroll', () => {
             const currentLink = document.querySelector(`.navbar-menu a[href*="${id}"]`);
             if (currentLink) {
                 currentLink.classList.add('active');
+                found = true;
             }
         }
     });
-});
+
+    if (!found) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const homeLink = document.querySelector('.navbar-menu a[href="#home"]');
+        if (homeLink) homeLink.classList.add('active');
+    }
+}
+
+window.addEventListener('scroll', updateActiveLinkOnScroll);
+window.addEventListener('load', updateActiveLinkOnScroll);
+window.addEventListener('hashchange', updateActiveLinkOnScroll);
 
 // Mobile Swiping Implementation for Menu Carousel Slider
 const menuSlider = document.getElementById('slider');
