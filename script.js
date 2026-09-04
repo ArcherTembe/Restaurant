@@ -68,6 +68,8 @@ const translations = {
     "#visit > .section-label": "04 / Come say hello",
     "#visit h2": "Find your way<br><em>to Bloom.</em>",
     ".hours strong": "Opening hours",
+    ".hours p:first-of-type": "<span>Monday - Saturday</span><span>07:00 - 19:00</span>",
+    ".hours p.closed": "<span>Sunday</span><span>07:00 - 15:00</span>",
     "footer p": "Clean food. Fresh energy.",
   },
   pt: {
@@ -111,6 +113,8 @@ const translations = {
     "#visit > .section-label": "04 / Venha visitar-nos",
     "#visit h2": "Encontre o caminho<br><em>para a Bloom.</em>",
     ".hours strong": "Horário de funcionamento",
+    ".hours p:first-of-type": "<span>Segunda - Sábado</span><span>07:00 - 19:00</span>",
+    ".hours p.closed": "<span>Domingo</span><span>07:00 - 15:00</span>",
     "footer p": "Comida fresca. Energia boa.",
   },
 };
