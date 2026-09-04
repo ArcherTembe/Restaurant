@@ -2,7 +2,6 @@ const navbarToggle = document.querySelector(".navbar-toggle");
 const navbarMenu = document.querySelector(".navbar-menu");
 const reservationForm = document.querySelector("#reservation-form");
 const dateInput = document.querySelector("#date");
-
 // Mobile navigation
 function closeMenu() {
   navbarMenu.classList.remove("active");
@@ -51,8 +50,6 @@ const translations = {
     "#menu .section-heading p": "Simple things, done beautifully.",
     ".menu-image-card:first-child figcaption span": "Food menu",
     ".menu-image-card-pink figcaption span": "Drinks menu",
-    ".menu-upload-card strong": "Menu image",
-    ".menu-upload-card span": "Replace this card with your menu board",
     "#reserve .section-label": "03 / Make it a date",
     "#reserve h2": "Save a seat<br><em>at Bloom.</em>",
     "#reserve .reserve-copy > p":
@@ -68,7 +65,8 @@ const translations = {
     "#visit > .section-label": "04 / Come say hello",
     "#visit h2": "Find your way<br><em>to Bloom.</em>",
     ".hours strong": "Opening hours",
-    ".hours p:first-of-type": "<span>Monday - Saturday</span><span>07:00 - 19:00</span>",
+    ".hours p:first-of-type":
+      "<span>Monday - Saturday</span><span>07:00 - 19:00</span>",
     ".hours p.closed": "<span>Sunday</span><span>07:00 - 15:00</span>",
     "footer p": "Clean food. Fresh energy.",
   },
@@ -96,8 +94,6 @@ const translations = {
     "#menu .section-heading p": "Coisas simples, feitas com beleza.",
     ".menu-image-card:first-child figcaption span": "Menu de comida",
     ".menu-image-card-pink figcaption span": "Menu de bebidas",
-    ".menu-upload-card strong": "Imagem do menu",
-    ".menu-upload-card span": "Substitua este cartão pela imagem do seu menu",
     "#reserve .section-label": "03 / Marque um encontro",
     "#reserve h2": "Guarde um lugar<br><em>na Bloom.</em>",
     "#reserve .reserve-copy > p":
@@ -113,7 +109,8 @@ const translations = {
     "#visit > .section-label": "04 / Venha visitar-nos",
     "#visit h2": "Encontre o caminho<br><em>para a Bloom.</em>",
     ".hours strong": "Horário de funcionamento",
-    ".hours p:first-of-type": "<span>Segunda - Sábado</span><span>07:00 - 19:00</span>",
+    ".hours p:first-of-type":
+      "<span>Segunda - Sábado</span><span>07:00 - 19:00</span>",
     ".hours p.closed": "<span>Domingo</span><span>07:00 - 15:00</span>",
     "footer p": "Comida fresca. Energia boa.",
   },

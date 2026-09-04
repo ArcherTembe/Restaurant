@@ -326,8 +326,7 @@ h2 em {
   gap: 16px;
   grid-template-columns: repeat(3, 1fr);
 }
-.menu-image-card,
-.menu-upload-card {
+.menu-image-card {
   min-height: 370px;
   overflow: hidden;
   position: relative;
@@ -340,6 +339,10 @@ h2 em {
   background: var(--pink);
   color: var(--cream);
 }
+.menu-image-card-yellow {
+  background: var(--yellow);
+  color: var(--cream);
+}
 .menu-image-card img {
   height: 100%;
   object-fit: cover;
@@ -347,18 +350,24 @@ h2 em {
   width: 100%;
 }
 .menu-image-card:after {
-  background: linear-gradient(0deg, rgba(11, 16, 19, 0.75), transparent 55%);
+  background: linear-gradient(0deg, rgba(11, 16, 19, 0.48), transparent 62%);
   content: "";
   inset: 0;
   position: absolute;
 }
 .menu-image-card figcaption {
+  align-items: center;
+  background: rgba(11, 16, 19, 0.56);
+  border: 1px solid rgba(248, 242, 229, 0.45);
   bottom: 25px;
+  border-radius: 4px;
+  color: var(--cream);
   display: flex;
   font-family: var(--serif);
   font-size: 1.7rem;
   justify-content: space-between;
   left: 25px;
+  padding: 10px 13px;
   position: absolute;
   right: 25px;
   z-index: 1;
@@ -367,39 +376,6 @@ h2 em {
   align-self: center;
   font-size: 0.9rem;
 }
-.menu-upload-card {
-  align-items: center;
-  background: var(--yellow);
-  color: var(--ink);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  text-align: center;
-}
-.menu-upload-card > i {
-  border: 1px solid rgba(11, 16, 19, 0.5);
-  border-radius: 50%;
-  font-size: 1.3rem;
-  padding: 18px;
-}
-.menu-upload-card figcaption {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 20px;
-}
-.menu-upload-card strong {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.menu-upload-card span {
-  font-size: 0.75rem;
-  max-width: 160px;
-  opacity: 0.7;
-}
-
 /* Reservation */
 .reserve-section {
   background: var(--lime);
@@ -530,6 +506,31 @@ h2 em {
   border: 0;
   min-height: 350px;
   width: 100%;
+}
+.whatsapp-bubble {
+  align-items: center;
+  background: var(--lime);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  bottom: 24px;
+  box-shadow: 0 8px 24px rgba(11, 16, 19, 0.28);
+  color: var(--green-dark);
+  display: flex;
+  font-size: 1.55rem;
+  height: 58px;
+  justify-content: center;
+  position: fixed;
+  right: 24px;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+  width: 58px;
+  z-index: 10;
+}
+.whatsapp-bubble:hover {
+  background: var(--pink);
+  color: var(--cream);
+  transform: translateY(-3px);
 }
 footer {
   align-items: center;
@@ -669,8 +670,7 @@ footer div a:hover {
   .visit-grid {
     grid-template-columns: 1fr;
   }
-  .menu-image-card,
-  .menu-upload-card {
+  .menu-image-card {
     min-height: 290px;
   }
   .reserve-section {
@@ -682,6 +682,10 @@ footer div a:hover {
   }
   .map {
     min-height: 280px;
+  }
+  .whatsapp-bubble {
+    bottom: 18px;
+    right: 18px;
   }
   footer {
     align-items: flex-start;
