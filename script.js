@@ -32,7 +32,6 @@ const translations = {
     '[href="#visit"]': "Find us",
     ".nav-reserve":
       'Reserve a table <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>',
-    ".eyebrow": "<span></span> A little joy, served fresh",
     h1: "Eat well.<br><em>Feel good.</em>",
     ".hero-text":
       "Bright plates, beautiful drinks, and a warm table waiting for you.",
@@ -76,7 +75,6 @@ const translations = {
     '[href="#visit"]': "Onde estamos",
     ".nav-reserve":
       'Reserve uma mesa <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>',
-    ".eyebrow": "<span></span> Um pouco de alegria, servida fresca",
     h1: "Coma bem.<br><em>Sinta-se bem.</em>",
     ".hero-text":
       "Pratos coloridos, bebidas bonitas e uma mesa acolhedora à sua espera.",

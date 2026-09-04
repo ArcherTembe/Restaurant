@@ -52,12 +52,25 @@ img {
 }
 .navbar-logo {
   color: var(--ink);
+  display: flex;
+  flex-direction: column;
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 5rem;
   letter-spacing: -0.03em;
+  line-height: 0.9;
 }
-.navbar-logo span {
+.navbar-logo .logo-name {
+  display: block;
+}
+.navbar-logo .logo-name > span {
   color: var(--lime);
+}
+.navbar-logo small {
+  color: var(--green-dark);
+  font: 700 0.62rem var(--sans);
+  letter-spacing: 0.16em;
+  margin-top: 12px;
+  text-transform: uppercase;
 }
 .navbar-menu {
   align-items: center;
@@ -143,25 +156,12 @@ img {
   min-height: 650px;
   padding: 58px max(32px, calc((100vw - 1176px) / 2)) 100px;
 }
-.eyebrow,
 .section-label {
   color: var(--lime);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-.eyebrow {
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-.eyebrow span {
-  background: var(--pink);
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
 }
 h1,
 h2,
@@ -552,10 +552,28 @@ footer div a:hover {
   color: var(--lime);
 }
 
+@media (min-width: 761px) {
+  .hero-copy {
+    align-self: start;
+    padding-top: 8px;
+    transform: translateY(-64px);
+  }
+  .hero h1 {
+    font-size: clamp(5rem, 9vw, 8.5rem);
+  }
+}
+
 /* Mobile layout */
 @media (max-width: 760px) {
   .navbar {
     padding: 18px 20px;
+  }
+  .navbar-logo {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .navbar-logo small {
+    display: none;
   }
   .navbar-toggle {
     display: flex;
