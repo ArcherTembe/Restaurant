@@ -7,6 +7,15 @@
       name="description"
       content="Bloom Cafe serves fresh food, bright drinks, and good energy in Maputo."
     />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://images.unsplash.com; frame-src https://www.google.com; connect-src 'self';"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(), payment=()"
+    />
     <title>Bloom Café | Fresh food, good energy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -180,11 +189,19 @@
                 name="name"
                 type="text"
                 placeholder="e.g. Amara Banda"
+                autocomplete="name"
+                maxlength="80"
+                pattern="[A-Za-zÀ-ÿ' -]+"
                 required
             /></label>
             <div class="form-row">
               <label for="date"
-                >Date<input id="date" name="date" type="date" required /></label
+                >Date<input
+                  id="date"
+                  name="date"
+                  type="date"
+                  autocomplete="off"
+                  required /></label
               ><label for="time"
                 >Time<select id="time" name="time" required>
                   <option value="">Choose</option>
@@ -211,6 +228,9 @@
                   name="phone"
                   type="tel"
                   placeholder="Your number"
+                  autocomplete="tel"
+                  maxlength="20"
+                  pattern="[+0-9 ()-]{7,20}"
                   required
               /></label>
             </div>
@@ -233,7 +253,7 @@
               class="address"
               href="https://www.google.com/maps/search/?api=1&query=-25.9722462,32.5946497"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               ><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Bloom
               Café<br /><span>Maputo, Mozambique</span></a
             >
@@ -249,6 +269,7 @@
             class="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.8717488686843!2d32.5946497!3d-25.9722462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69b8967351c8d%3A0x9fb5e4b5c4a72637!2sBloom%20caf%C3%A9!5e0!3m2!1sen!2smz!4v1788526116175!5m2!1sen!2smz"
             loading="lazy"
+            referrerpolicy="no-referrer"
             title="Bloom Cafe location in Maputo"
           ></iframe>
         </div>
@@ -259,7 +280,7 @@
       class="whatsapp-bubble"
       href="https://wa.me/258841566772?text=Hello%20Bloom%20Cafe%2C%20I%20would%20like%20to%20ask%20a%20question."
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label="Contact Bloom Cafe on WhatsApp"
     >
       <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -273,13 +294,13 @@
         <a
           href="https://www.instagram.com/bloom.cafe.mz/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="Instagram"
           ><i class="fa-brands fa-instagram"></i></a
         ><a
           href="https://www.tiktok.com/@cafebloom.sc?is_from_webapp=1&sender_device=pc"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="TikTok"
           ><i class="fa-brands fa-tiktok"></i
         ></a>
