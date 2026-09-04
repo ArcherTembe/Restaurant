@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bloom Cafe serves fresh food, bright drinks, and good energy in Lusaka.">
+    <title>Bloom Café | Fresh food, good energy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=8">
+    <script src="script.js?v=3" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="navbar-logo" href="#home" aria-label="Bloom Cafe home"><span>Bloom</span> café</a>
+            <button class="navbar-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="navbar-menu">
+                <a href="#about">Our story</a>
+                <a href="#menu">Menu</a>
+                <a href="#visit">Find us</a>
+                <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Portuguese"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>PT</span></button>
+                <a class="nav-reserve" href="#reserve">Reserve a table <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> A little joy, served fresh</p>
+                <h1>Eat well.<br><em>Feel good.</em></h1>
+                <p class="hero-text">Bright plates, beautiful drinks, and a warm table waiting for you.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#menu">See the menu <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="text-link" href="#reserve">Book your table <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=1000&q=85" alt="Fresh salad bowl with avocado and fruit">
+                <span class="hero-stamp">Fresh<br><strong>daily</strong></span>
+            </div>
+        </section>
+
+        <section class="intro section-shell" id="about">
+            <div class="section-label">01 / Our story</div>
+            <div class="intro-content">
+                <h2>Good food has<br><em>a bright side.</em></h2>
+                <p>Bloom is your sunny corner for clean, colourful food and drinks made with care. Come for a quick refresh, stay for the good conversation.</p>
+            </div>
+            <div class="intro-note"><i class="fa-solid fa-leaf" aria-hidden="true"></i><span>Clean food.<br>Fresh energy.</span></div>
+        </section>
+
+        <section class="menu-section section-shell" id="menu">
+            <div class="section-heading">
+                <div><div class="section-label">02 / From our kitchen</div><h2>Bloom <em>menu</em></h2></div>
+                <p>Simple things, done beautifully.</p>
+            </div>
+            <div class="menu-grid">
+                <figure class="menu-image-card"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=85" alt="Fresh colourful food on a table"><figcaption><span>Food menu</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></figcaption></figure>
+                <figure class="menu-image-card menu-image-card-pink"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85" alt="Colourful fresh drink"><figcaption><span>Drinks menu</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></figcaption></figure>
+                <figure class="menu-upload-card"><i class="fa-regular fa-image" aria-hidden="true"></i><figcaption><strong>Menu image</strong><span>Replace this card with your menu board</span></figcaption></figure>
+            </div>
+        </section>
+
+        <section class="reserve-section" id="reserve">
+            <div class="reserve-inner">
+                <div class="reserve-copy"><div class="section-label">03 / Make it a date</div><h2>Save a seat<br><em>at Bloom.</em></h2><p>Planning a breakfast, lunch, or just a good catch-up? We’ll have your table ready.</p><div class="reserve-contact"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+260 97 000 0000<br><small>Call us to make a group booking</small></span></div></div>
+                <form class="reservation-form" id="reservation-form">
+                    <label for="name">Your name<input id="name" name="name" type="text" placeholder="e.g. Amara Banda" required></label>
+                    <div class="form-row"><label for="date">Date<input id="date" name="date" type="date" required></label><label for="time">Time<select id="time" name="time" required><option value="">Choose</option><option>09:00</option><option>11:00</option><option>13:00</option><option>15:00</option><option>17:00</option></select></label></div>
+                    <div class="form-row"><label for="guests">Guests<select id="guests" name="guests" required><option value="">Choose</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4+ guests</option></select></label><label for="phone">Phone<input id="phone" name="phone" type="tel" placeholder="Your number" required></label></div>
+                    <button class="button button-dark" type="submit">Request reservation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    <p class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="visit section-shell" id="visit">
+            <div class="section-label">04 / Come say hello</div><div class="visit-grid"><div><h2>Find your way<br><em>to Bloom.</em></h2><a class="address" href="https://maps.app.goo.gl/RjFSX4ArHLQAf2AE6" target="_blank" rel="noreferrer"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Av. Julius Nyerere<br><span>In front of Bon Garfo</span></a><div class="hours"><strong>Opening hours</strong><p><span>Tuesday - Friday</span><span>08:00 - 18:00</span></p><p><span>Saturday</span><span>08:00 - 21:00</span></p><p><span>Sunday</span><span>08:00 - 19:00</span></p><p class="closed"><span>Monday</span><span>Closed</span></p></div></div><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.031618929726!2d32.58956077496419!3d-25.967003354354876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69bbe3aaf1de1%3a0xbc970c8446466f86!2sBubbles%20%26%20Craft!5e0!3m2!1sen!2smz!4v1783972404624!5m2!1sen!2smz" loading="lazy" title="Bloom Cafe location map"></iframe></div>
+        </section>
+    </main>
+
+    <footer><a class="navbar-logo" href="#home"><span>Bloom</span> café</a><p>Clean food. Fresh energy.</p><div><a href="https://www.instagram.com/bubbles_and_craft" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.tiktok.com/@bubbles_and_craft" target="_blank" rel="noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></div></footer>
+</body>
+</html>
