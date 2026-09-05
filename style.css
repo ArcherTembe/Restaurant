@@ -377,6 +377,13 @@ h2 em {
   align-self: center;
   font-size: 0.9rem;
 }
+.menu-image-card figcaption a {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 /* Reservation */
 .reserve-section {
   background: var(--lime);
